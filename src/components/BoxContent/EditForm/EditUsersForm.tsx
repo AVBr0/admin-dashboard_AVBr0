@@ -9,7 +9,7 @@ const EditUsersForm = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { lastUserID, selectedUserData, action } = location.state;
-  const currentID = (lastUserID + 1) as number;
+  const currentID = +lastUserID + 1;
 
   // console.log(lastUserID, action, selectedUserData);
 

@@ -57,7 +57,10 @@ const Customers = observer(() => {
           <Button
             onClick={() => {
               navigate('/admin-dashboard-react/editUsers', {
-                state: { lastUserID: value.length, action: 'create' },
+                state: {
+                  lastUserID: value[value.length - 1].id,
+                  action: 'create',
+                },
               });
             }}
           >

@@ -22,7 +22,7 @@ const EditInventoryForm = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { lastProductID, selectedProductData, action } = location.state;
-  const currentID = (lastProductID + 1) as number;
+  const currentID = +lastProductID + 1;
 
   // console.log(lastProductID, action, selectedProductData);
 
@@ -111,11 +111,11 @@ const EditInventoryForm = () => {
               message: 'Please enter the price of the Product',
             },
             {
-              pattern: /^\d+$/,
+              pattern: /^[0-9]+[.]?\d?\d$/,
               message: 'Incorrect format',
             },
             {
-              max: 18,
+              max: 10,
             },
           ]}
           label="Price"

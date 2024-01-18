@@ -56,7 +56,10 @@ const Inventory = observer(() => {
           <Button
             onClick={() => {
               navigate('/admin-dashboard-react/editInventory', {
-                state: { lastProductID: value.length, action: 'create' },
+                state: {
+                  lastUserID: value[value.length - 1].id,
+                  action: 'create',
+                },
               });
             }}
           >
