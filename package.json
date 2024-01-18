@@ -1,0 +1,59 @@
+{
+  "name": "vite-react-eslint-prettier-husky-setup",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run dev\"",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "server": "json-server --watch src/server/db.json -p 3001"
+  },
+  "dependencies": {
+    "@ant-design/charts": "^2.0.3",
+    "@ant-design/icons": "^5.2.6",
+    "@types/styled-components": "^5.1.34",
+    "antd": "^5.12.3",
+    "axios": "^1.6.2",
+    "mobx": "^6.12.0",
+    "mobx-react-lite": "^4.0.5",
+    "mobx-utils": "^6.0.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-media": "^1.10.0",
+    "react-router-dom": "^6.21.0",
+    "recharts": "^2.10.3",
+    "styled-components": "^6.1.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^8.0.3",
+    "json-server": "^1.0.0-alpha.21",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.7",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
+  },
+  "lint-staged": {
+    "*.{js,css,ts,tsx,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}
