@@ -94,7 +94,7 @@ const EditInventoryForm = () => {
               min: 2,
             },
             {
-              max: 16,
+              max: 50,
             },
           ]}
           label="Title"

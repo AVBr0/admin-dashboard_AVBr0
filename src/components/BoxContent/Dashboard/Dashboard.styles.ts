@@ -89,7 +89,7 @@ export const Box7 = styled(Box)`
   grid-row: span 2;
 
   @media screen and ${({ theme }) => theme.media.MD} {
-    display: none;
+    grid-column: span 1;
   }
 `;
 
